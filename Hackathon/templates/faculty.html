@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='faculty.css') }}">
+</head>
+<body>
+  <!-- Faculty Dashboard Container -->
+  <div class="dashboard-container">
+    <header>
+      <h1>Faculty Dashboard</h1>
+      <!-- Logout Button (Fixed as a glowing link) -->
+      <a href="/logout" id="logoutBtn" class="glow-button">Logout</a>
+    </header>
+
+    <!-- PTM Slot Requests Section -->
+    <section class="ptm-slot-requests">
+      <h2>PTM Slot Requests</h2>
+      <table id="ptmTable">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Requested Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Student Data Upload Section -->
+    <section class="student-data-upload">
+      <h2>Upload Student Data</h2>
+      <form id="studentDataForm">
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" required />
+        <label for="attendance">Attendance (%):</label>
+        <input type="number" id="attendance" required />
+        <label for="marks">Marks:</label>
+        <input type="number" id="marks" required />
+        <label for="behavior">Behavior:</label>
+        <input type="text" id="behavior" required />
+        <label for="activities">Extracurricular Activities:</label>
+        <textarea id="activities" required></textarea>
+        <button type="submit">Upload Data</button>
+      </form>
+    </section>
+
+    <!-- Book Availability Section -->
+    <section class="book-availability">
+      <h2>Book Availability</h2>
+      <form id="bookUploadForm">
+        <label for="bookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" required />
+        <label for="author">Author:</label>
+        <input type="text" id="author" required />
+        <label for="quantity">Available Quantity:</label>
+        <input type="number" id="quantity" required />
+        <button type="submit">Upload Book</button>
+      </form>
+    </section>
+
+    <!-- Event News Section -->
+    <section class="event-news">
+      <h2>Upload Event News</h2>
+      <form id="newsForm">
+        <textarea id="newsText" placeholder="Enter news or event details..." required></textarea>
+        <button type="submit">Submit News</button>
+      </form>
+    </section>
+
+    <!-- Placement News Section -->
+    <section class="placement-news">
+      <h2>Upload Placement News</h2>
+      <form id="placementForm">
+        <textarea id="placementText" placeholder="Enter placement news details..." required></textarea>
+        <button type="submit">Submit Placement News</button>
+      </form>
+    </section>
+
+    <!-- PTM Slot Upload Section -->
+    <section class="ptm-slot-upload">
+      <h2>Upload PTM Slot</h2>
+      <form id="ptmSlotForm">
+        <label for="ptmDate">PTM Date:</label>
+        <input type="date" id="ptmDate" required />
+        <label for="ptmTime">PTM Time:</label>
+        <input type="time" id="ptmTime" required />
+        <button type="submit">Upload PTM Slot</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='faculty.js') }}"></script>
+</body>
+</html>

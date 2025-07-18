@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #1a237e;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 100px 120px; /* 40px vertical, 60px horizontal spacing */
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow:
+    0 0 20px rgba(0, 191, 255, 0.8),
+    0 0 30px rgba(0, 191, 255, 0.6),
+    0 0 40px rgba(0, 191, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  color: #1976d2;
+  text-shadow: 0 0 4px rgba(0, 191, 255, 0.4);
+}
+
+.card p {
+  font-size: 14px;
+  color: #444;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #e0f7ff;
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 1),
+    0 0 50px rgba(0, 255, 255, 0.9),
+    0 0 60px rgba(0, 255, 255, 0.8);
+  color: #00e5ff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+}
+
+.card:hover p {
+  color: #00e5ff;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.7);
+}
+
+.logout-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #ff4e4e;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff4e4e, 0 0 16px #ff4e4e;
+  text-shadow: 0 0 5px #ff4e4e;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.logout-button:hover {
+  background-color: #ff4e4e;
+  color: #000;
+  box-shadow: 0 0 16px #ff4e4e, 0 0 24px #ff4e4e;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="login-box">
+    <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="logo">
+
+    <h2>Login</h2>
+
+    <form id="loginForm" action="/login" method="POST">
+      <div class="radio-group">
+        <label><input type="radio" name="role" value="student" checked> <strong>Student</strong></label>
+        <label><input type="radio" name="role" value="faculty"> <strong>Faculty</strong></label>
+        <label><input type="radio" name="role" value="parent"> <strong>Parent</strong></label>
+      </div>
+
+      <!-- Student Fields -->
+      <div class="field student-field">
+        <input type="text" id="student-name" placeholder="Name" name="student-name">
+      </div>
+      <div class="field student-field">
+        <input type="text" id="student-id" placeholder="ID" name="student-id">
+      </div>
+      <div class="field student-field">
+        <input type="text" id="student-branch" placeholder="Branch" name="student-branch">
+      </div>
+      <div class="field student-field">
+        <input type="text" id="student-year" placeholder="Year" name="student-year">
+      </div>
+      <div class="field student-field">
+        <input type="text" id="student-course" placeholder="Course" name="student-course">
+      </div>
+
+      <!-- Faculty Fields -->
+      <div class="field faculty-field" style="display: none;">
+        <input type="text" id="faculty-name" placeholder="Faculty Name" name="faculty-name">
+      </div>
+      <div class="field faculty-field" style="display: none;">
+        <input type="text" id="faculty-id" placeholder="Faculty ID" name="faculty-id">
+      </div>
+
+      <!-- Parent Fields -->
+      <div class="field parent-field" style="display: none;">
+        <input type="text" id="parent-student-name" placeholder="Student Name" name="parent-student-name">
+      </div>
+      <div class="field parent-field" style="display: none;">
+        <input type="text" id="parent-student-id" placeholder="Student ID" name="parent-student-id">
+      </div>
+      <div class="field parent-field" style="display: none;">
+        <input type="text" id="parent-id" placeholder="Parent ID" name="parent-id">
+      </div>
+
+      <input type="submit" value="Login" class="glow-button">
+    </form>
+
+    <a href="#" class="forgot">Forgot password?</a>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

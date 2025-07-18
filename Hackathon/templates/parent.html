@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parent Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='parent.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome, Parent</h1>
+        <button class="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+
+    <div class="main-container">
+        <!-- PTM Slot Request Section -->
+        <div class="glow-card">
+            <h2>PTM Slot Request</h2>
+            <form class="ptm-form">
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" placeholder="Enter student name">
+
+                <label for="preferred-date">Preferred Date:</label>
+                <input type="date" id="preferred-date">
+
+                <label for="preferred-time">Preferred Time:</label>
+                <input type="time" id="preferred-time">
+
+                <button type="submit">Send Request</button>
+            </form>
+        </div>
+
+        <!-- Student Performance Section -->
+        <div class="glow-card">
+            <h2>Student Performance</h2>
+            <button class="get-data-btn" onclick="getStudentData()">Get Data</button>
+
+            <div class="marks-distribution" id="marks-section">
+                <h3>Marks Distribution</h3>
+                <!-- JS will insert marks here -->
+            </div>
+
+            <div class="attendance-overview" id="attendance-section">
+                <h3>Attendance Overview</h3>
+                <!-- JS will insert attendance here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='parent.js') }}"></script>
+</body>
+</html>

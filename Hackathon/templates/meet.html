@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📅 Request a Faculty Meeting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='meet.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📩 Send Meeting Request</h1>
+
+    <!-- Back to Dashboard Button -->
+    <button onclick="window.location.href='{{ url_for('student') }}'" class="back-button">🔙 Back to Dashboard</button>
+
+    <form action="{{ url_for('send_request') }}" method="POST">
+      <input type="text" name="student_name" placeholder="Your Name" required>
+      <input type="text" name="faculty_name" placeholder="Faculty Name" required>
+      <input type="datetime-local" name="preferred_time" required>
+      <textarea name="reason" placeholder="Reason for Meeting" required></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+
+    {% if message %}
+      <p class="message">{{ message }}</p>
+    {% endif %}
+  </div>
+
+  <script src="{{ url_for('static', filename='meet.js') }}"></script>
+</body>
+</html>

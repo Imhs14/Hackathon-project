@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .book-container {
+    text-align: center;
+    padding: 40px;
+    background: #111;
+    border-radius: 15px;
+    box-shadow: 0 0 30px cyan;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0 0 10px cyan;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #00e5ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00e5ff;
+  }
+  
+  button:hover {
+    background: cyan;
+    box-shadow: 0 0 25px #00ffff;
+  }
+  
+  .result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px cyan;
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #e50914;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .back-button:hover {
+    background-color: #b2060f;
+    box-shadow: 0 0 20px #ff3c3c;
+  }
+  

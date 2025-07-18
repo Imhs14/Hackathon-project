@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faculty Availability</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='availability.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Back to Dashboard Button -->
+    <button onclick="window.location.href='{{ url_for('student') }}'" class="back-button">🔙 Back to Dashboard</button>
+
+    <h1>👨‍🏫 Faculty Availability Checker</h1>
+
+    <!-- Feature 1 -->
+    <div class="section">
+      <h2>1️⃣ Check Faculty Availability at a Time</h2>
+      <input type="text" id="availabilityName1" placeholder="Enter Faculty Name">
+      <input type="time" id="checkTime">
+      <button onclick="checkAvailability()">Check</button>
+      <p id="availabilityResult"></p>
+    </div>
+
+    <hr>
+
+    <!-- Feature 2 -->
+    <div class="section">
+      <h2>2️⃣ View All Available Time Slots</h2>
+      <input type="text" id="availabilityName2" placeholder="Enter Faculty Name">
+      <button onclick="showAvailableTimes()">Show</button>
+      <ul id="availableTimesList"></ul>
+    </div>
+
+    <hr>
+
+    <!-- Feature 3 -->
+    <div class="section">
+      <h2>3️⃣ View Today's Schedule</h2>
+      <input type="text" id="availabilityName3" placeholder="Enter Faculty Name">
+      <button onclick="showTodaysSchedule()">Show Schedule</button>
+      <ul id="todaysScheduleList"></ul>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='availability.js') }}"></script>
+</body>
+</html>

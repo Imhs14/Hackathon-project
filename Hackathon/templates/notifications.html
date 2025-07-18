@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notifications</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='notifications.css') }}">
+</head>
+<body>
+  <!-- Back to Dashboard Button -->
+  <button onclick="window.location.href='{{ url_for('student') }}'" class="back-button">🔙 Back to Dashboard</button>
+
+  <div class="container">
+    <h1>🔔 Notifications Dashboard</h1>
+    <div class="card-grid">
+      <div class="card" onclick="window.location.href='{{ url_for('attendance') }}';">
+        <h2>📅 Attendance</h2>
+        <p>Check your attendance record</p>
+      </div>
+      <div class="card" onclick="window.location.href='{{ url_for('events') }}';">
+        <h2>🗓️ Events</h2>
+        <p>See upcoming events</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='notifications.js') }}"></script>
+</body>
+</html>

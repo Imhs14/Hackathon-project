@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='events.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Glowing Back Button -->
+  <button onclick="window.location.href='{{ url_for('notifications') }}'" class="back-button">🔙 Back</button>
+
+  <div class="events-container">
+    <h1>📅 Upcoming Events & Placements</h1>
+
+    <div class="cards-grid">
+      <!-- Events -->
+      <div class="event-card">
+        <h2>Hackathon 2025</h2>
+        <p>Compete to build AI projects in 24 hours!</p>
+        <p><i class="fa fa-calendar"></i> April 25, 2025</p>
+        <p><i class="fa fa-location-dot"></i> Main Auditorium</p>
+      </div>
+
+      <div class="event-card">
+        <h2>Design Thinking Workshop</h2>
+        <p>Learn to innovate like a pro with design experts.</p>
+        <p><i class="fa fa-calendar"></i> April 18, 2025</p>
+        <p><i class="fa fa-location-dot"></i> Innovation Lab</p>
+      </div>
+
+      <!-- Placement News -->
+      <div class="event-card placement">
+        <h2>🎉 Placement News</h2>
+        <p><strong>Rohan Sharma</strong> cracked <strong>₹25 LPA</strong> at Amazon!</p>
+        <p><i class="fa fa-envelope"></i> rohan25@example.com</p>
+        <p><i class="fa fa-phone"></i> +91 9876543210</p>
+      </div>
+
+      <div class="event-card placement">
+        <h2>🎉 Placement News</h2>
+        <p><strong>Priya Nair</strong> cracked <strong>₹69 LPA</strong> at Google!</p>
+        <p><i class="fa fa-envelope"></i> priya.nair@googlemail.com</p>
+        <p><i class="fa fa-phone"></i> +91 9998887777</p>
+      </div>
+
+      <div class="event-card">
+        <h2>Cybersecurity Bootcamp</h2>
+        <p>Intensive bootcamp on real-world security practices.</p>
+        <p><i class="fa fa-calendar"></i> April 30, 2025</p>
+        <p><i class="fa fa-location-dot"></i> Room 204</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='events.js') }}"></script>
+</body>
+</html>

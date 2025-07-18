@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    color: #fff;
+  }
+  
+  .header {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid red;
+    position: relative;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+    color: #ff4c4c;
+    text-shadow: 0 0 10px #ff4c4c;
+  }
+  
+  .logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: transparent;
+    border: 2px solid red;
+    padding: 10px 20px;
+    color: #ff4c4c;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .logout-btn:hover {
+    background: red;
+    color: black;
+    box-shadow: 0 0 12px red;
+  }
+  
+  .main-container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .glow-card {
+    background: #1a1a1a;
+    border: 1px solid #550000;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px #66000066;
+  }
+  
+  .glow-card h2 {
+    color: #ff4c4c;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px red;
+  }
+  
+  .glow-card h3 {
+    color: #ffffff;
+    margin-top: 25px;
+    text-shadow: 0 0 5px #fff;
+  }
+  
+  .ptm-form label {
+    display: block;
+    margin-top: 15px;
+    color: #ccc;
+  }
+  
+  .ptm-form input {
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .ptm-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px red;
+  }
+  
+  .ptm-form button:hover {
+    background: #ff4c4c;
+    box-shadow: 0 0 15px #ff4c4c;
+  }
+  
+  .get-data-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: red;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px red;
+  }
+  
+  .get-data-btn:hover {
+    background: #ff4c4c;
+    box-shadow: 0 0 15px #ff4c4c;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 10px;
+  }
+  
+  ul li {
+    padding: 6px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #333;
+  }
+  

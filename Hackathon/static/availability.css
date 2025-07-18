@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+.container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+  width: 90%;
+  max-width: 600px;
+}
+
+h1 {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+input[type="text"],
+input[type="time"] {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 60%;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+#availabilityResult {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  background: #e3f2fd;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #ff4e4e;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff4e4e, 0 0 20px #ff4e4e;
+  text-shadow: 0 0 5px #ff4e4e;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-button:hover {
+  background: #ff4e4e;
+  color: black;
+  box-shadow: 0 0 20px #ff4e4e, 0 0 30px #ff4e4e;
+}

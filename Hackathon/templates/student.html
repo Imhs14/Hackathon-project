@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='student.css') }}">
+</head>
+<body>
+  <!-- Logout Button (Top Left) -->
+  <button onclick="window.location.href='{{ url_for('logout') }}'" class="logout-button">🚪 Logout</button>
+
+  <div class="container">
+    <h1>Welcome, Student 👋</h1>
+    <div class="card-grid">
+      <div class="card" onclick="window.location.href='{{ url_for('availability') }}';">
+        <h2>🧑‍🏫 Faculty Availability</h2>
+        <p>View your faculty's availability</p>
+      </div>
+      <div class="card" onclick="window.location.href='{{ url_for('meet_request') }}';">
+        <h2>📅 Meet Request</h2>
+        <p>Request a meeting with faculty</p>
+      </div>
+      <div class="card" onclick="window.location.href='{{ url_for('books') }}';">
+        <h2>📖 Book Availability</h2>
+        <p>Check library resources</p>
+      </div>
+      <div class="card" onclick="window.location.href='{{ url_for('notifications') }}';">
+        <h2>🔔 Notifications</h2>
+        <p>Attendance, Events, Placements</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
